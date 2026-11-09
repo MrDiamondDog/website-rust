@@ -1,0 +1,17 @@
+[package]
+name = "website-rust"
+version = "0.1.0"
+authors = ["MrDiamondDog"]
+edition = "2021"
+
+[dependencies]
+dioxus = { version = "0.7.1", features = ["fullstack"] }
+reqwest = { version = "0.13.5", features = ["json"] }
+serde = { version = "1.0.229", features = ["derive"] }
+
+[features]
+default = []
+web = ["dioxus/web"]
+desktop = ["dioxus/desktop"]
+mobile = ["dioxus/mobile"]
+server = ["dioxus/server"]

@@ -1,0 +1,65 @@
+body {
+	font-family: Lexend, sans-serif;
+	background-color: var(--color-background);
+	color: var(--color-foreground);
+}
+
+@layer base {
+	@media (min-width: 768px) {
+		h1 {
+			font-size: 2rem !important;
+			font-weight: 700 !important;
+		}
+
+		h2 {
+			font-size: 1.5rem !important;
+			font-weight: 600 !important;
+		}
+
+		h3 {
+			font-size: 1.25rem !important;
+			font-weight: 500 !important;
+		}
+
+		h4 {
+			font-size: 1rem !important;
+			font-weight: 500 !important;
+		}
+	}
+
+	@media (max-width: 768px) {
+		h1 {
+			font-size: 1.5rem !important;
+			font-weight: 700 !important;
+		}
+
+		h2 {
+			font-size: 1.25rem !important;
+			font-weight: 600 !important;
+		}
+
+		h3 {
+			font-size: 1rem !important;
+			font-weight: 500 !important;
+		}
+
+		h4 {
+			font-size: 0.8rem !important;
+			font-weight: 500 !important;
+		}
+	}
+}
+
+@layer utilities {
+	.absolute-center {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.pixelated {
+		image-rendering: pixelated;
+		image-rendering: -moz-crisp-edges;
+	}
+}
