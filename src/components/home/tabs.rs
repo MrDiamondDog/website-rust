@@ -22,3 +22,12 @@ pub fn Tab(name: String, selection: Signal<String>) -> Element {
         }
     }
 }
+
+#[component]
+pub fn TabContent(children: Element, visible: bool) -> Element {
+    rsx! {
+        div { class: if visible { "visible" } else { "hidden" },
+            {children}
+        }
+    }
+}
